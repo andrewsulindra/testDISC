@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Test DISC IFGF</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+	
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+	<link rel="stylesheet" type="text/css" href="table/css/util.css">
+	<link rel="stylesheet" type="text/css" href="table/css/main.css">
+	
+<script type="text/javascript">
+  var urlsubmit = "https://portal.ifgfsby.org/api/onlineclass_disc";
+  var urldata = "https://portal.ifgfsby.org/api/onlineclass_getteacher"; 
+  var urlimage = "https://portal.ifgfsby.org/api/onlineclass_image"; 
+</script>
+
+</head>
+
+<body>
+    <div class="page-wrapper bg-blue p-t-30 p-b-10 font-poppins">
+        <div class="wrapper wrapper--w1360">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Test DISC</h2>
+                    <br>
+                    <h4 style="color:red">First, Please Download The Graph File</h4>
+                    <a href="/images/grafik.jpg" download>Click to Download</a>
+                    <br>
+                    <br>
+                    <form id="myForm" method="POST">
+						<div class="input-group">
+              <input type='hidden' name='photo' id="photo" value='a' required/>
+							<label class="label">name</label>
+							<input class="input--style-4" type="text" name="fullname" required>
+						</div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+									<label class="label">email</label>
+									<input class="input--style-4" type="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Gender</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">Male
+                                            <input type="radio" checked="checked" name="gender" value="male">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Female
+                                            <input type="radio" name="gender" value="female">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label">Teacher</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+								<select class="form-control" name="teacher" id="teacher" style="width: 100%;" required>
+								  <option></option>
+								</select>  
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+						
+
+                        
+                          <div class="container-table100" style="margin-top:-10px">
+                            <div class="wrap-table100">
+                              <div class="table100">
+                                <table>
+                                  <thead>
+                                    <tr class="table100-head">
+                                      <th></th>
+                                      <th></th>
+                                      <th></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr><td><div class="gr"><div class="dradio"><input type="radio" name="answer[group1][most]" value="sgroup1most1" required>Most<input type="radio" name="answer[group1][least]" value="sgroup1least1" required>Least</div><div class="dlabel"><label>Mudah bergaul, ramah</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group1][most]" value="igroup1most2">Most<input type="radio" name="answer[group1][least]" value="igroup1least2">Least</div><div class="dlabel"><label>Penuh kepercayaan, Percaya kepada orang lain</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group1][most]" value="bgroup1most3">Most<input type="radio" name="answer[group1][least]" value="dgroup1least3">Least</div><div class="dlabel"><label>Petualang, Mengambil risiko</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group1][most]" value="cgroup1most4">Most<input type="radio" name="answer[group1][least]" value="cgroup1least4">Least</div><div class="dlabel"><label>Toleran, Penuh Hormat</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group2][most]" value="dgroup2most1" required>Most<input type="radio" name="answer[group2][least]" value="dgroup2least1" required>Least</div><div class="dlabel"><label>Yang penting adalah hasil</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group2][most]" value="cgroup2most2">Most<input type="radio" name="answer[group2][least]" value="cgroup2least2">Least</div><div class="dlabel"><label>Melakukan dengan benar, Ketepatan dihitung</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group2][most]" value="bgroup2most3">Most<input type="radio" name="answer[group2][least]" value="igroup2least3">Least</div><div class="dlabel"><label>Buat menjadi menyenangkan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group2][most]" value="bgroup2most4">Most<input type="radio" name="answer[group2][least]" value="sgroup2least4">Least</div><div class="dlabel"><label>Mari melakukan bersama</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group3][most]" value="bgroup3most1" required>Most<input type="radio" name="answer[group3][least]" value="cgroup3least1" required>Least</div><div class="dlabel"><label>Pendidikan, Kebudayaan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group3][most]" value="dgroup3most2">Most<input type="radio" name="answer[group3][least]" value="dgroup3least2">Least</div><div class="dlabel"><label>Pencapaian, Penghargaan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group3][most]" value="sgroup3most3">Most<input type="radio" name="answer[group3][least]" value="sgroup3least3">Least</div><div class="dlabel"><label>Keselamatan, Keamanan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group3][most]" value="igroup3most4">Most<input type="radio" name="answer[group3][least]" value="bgroup3least4">Least</div><div class="dlabel"><label>Sosial, Pertemuan kelompok</label></div></div></td>
+                                      </tr>
+                                      <tr><td><div class="gr"><div class="dradio"><input type="radio" name="answer[group4][most]" value="cgroup4most1" required>Most<input type="radio" name="answer[group4][least]" value="bgroup4least1" required>Least</div><div class="dlabel"><label>Lembut, Pendiam</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group4][most]" value="dgroup4most2">Most<input type="radio" name="answer[group4][least]" value="dgroup4least2">Least</div><div class="dlabel"><label>Optimis, Pengkhayal</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group4][most]" value="bgroup4most3">Most<input type="radio" name="answer[group4][least]" value="igroup4least3">Least</div><div class="dlabel"><label>Pusat perhatian, Mudah bersosialisasi</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group4][most]" value="sgroup4most4">Most<input type="radio" name="answer[group4][least]" value="sgroup4least4">Least</div><div class="dlabel"><label>Pembuat Perdamaian, Membawa ketenangan</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group5][most]" value="bgroup5most1" required>Most<input type="radio" name="answer[group5][least]" value="cgroup5least1" required>Least</div><div class="dlabel"><label>Akan melakukan tanpa, Kontrol diri</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group5][most]" value="dgroup5most2">Most<input type="radio" name="answer[group5][least]" value="dgroup5least2">Least</div><div class="dlabel"><label>Akan membeli berdasarkan hasrat</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group5][most]" value="sgroup5most3">Most<input type="radio" name="answer[group5][least]" value="sgroup5least3">Least</div><div class="dlabel"><label>Akan menunggu. Tidak ada tekanan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group5][most]" value="igroup5most4">Most<input type="radio" name="answer[group5][least]" value="bgroup5least4">Least</div><div class="dlabel"><label>Akan membelanjakan apa yang saya inginkan</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group6][most]" value="dgroup6most1" required>Most<input type="radio" name="answer[group6][least]" value="dgroup6least1" required>Least</div><div class="dlabel"><label>Bertanggung jawab, Pendekatan langsung</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group6][most]" value="bgroup6most2">Most<input type="radio" name="answer[group6][least]" value="igroup6least2">Least</div><div class="dlabel"><label>Mudah bergaul, Antusias</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group6][most]" value="bgroup6most3">Most<input type="radio" name="answer[group6][least]" value="sgroup6least3">Least</div><div class="dlabel"><label>Mudah ditebak, Konsisten</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group6][most]" value="cgroup6most4">Most<input type="radio" name="answer[group6][least]" value="bgroup6least4">Least</div><div class="dlabel"><label>Waspada, Berhati-hati</label></div></div></td>
+                                      </tr>
+                                      <tr><td><div class="gr"><div class="dradio"><input type="radio" name="answer[group7][most]" value="igroup7most1" required>Most<input type="radio" name="answer[group7][least]" value="cgroup7least1" required>Least</div><div class="dlabel"><label>Mendorong orang lain</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group7][most]" value="bgroup7most2">Most<input type="radio" name="answer[group7][least]" value="sgroup7least2">Least</div><div class="dlabel"><label>Berjuang demi kesempurnaan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group7][most]" value="bgroup7most3">Most<input type="radio" name="answer[group7][least]" value="bgroup7least3">Least</div><div class="dlabel"><label>Menjadi bagian tim</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group7][most]" value="dgroup7most4">Most<input type="radio" name="answer[group7][least]" value="dgroup7least4">Least</div><div class="dlabel"><label>Ingin mencapai tujuan</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group8][most]" value="sgroup8most1" required>Most<input type="radio" name="answer[group8][least]" value="bgroup8least1" required>Least</div><div class="dlabel"><label>Ramah, Mudah berteman</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group8][most]" value="bgroup8most2">Most<input type="radio" name="answer[group8][least]" value="igroup8least2">Least</div><div class="dlabel"><label>Unik, Bosan dengan rutinitas</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group8][most]" value="dgroup8most3">Most<input type="radio" name="answer[group8][least]" value="dgroup8least3">Least</div><div class="dlabel"><label>Aktif merubah hal-hal</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group8][most]" value="cgroup8most4">Most<input type="radio" name="answer[group8][least]" value="cgroup8least4">Least</div><div class="dlabel"><label>Menginginkan sesuatu yang pasti</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group9][most]" value="dgroup9most1" required>Most<input type="radio" name="answer[group9][least]" value="dgroup9least1" required>Least</div><div class="dlabel"><label>Tidak mudah dikalahkan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group9][most]" value="sgroup9most2">Most<input type="radio" name="answer[group9][least]" value="bgroup9least2">Least</div><div class="dlabel"><label>Akan melakukan sesuai perintah, Mengikuti pimpinan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group9][most]" value="igroup9most3">Most<input type="radio" name="answer[group9][least]" value="igroup9least3">Least</div><div class="dlabel"><label>Riang, Ceria</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group9][most]" value="bgroup9most4">Most<input type="radio" name="answer[group9][least]" value="cgroup9least4">Least</div><div class="dlabel"><label>Ingin segalanya teratur, Rapi</label></div></div></td>
+                                      </tr>
+                                      <tr><td><div class="gr"><div class="dradio"><input type="radio" name="answer[group10][most]" value="cgroup10most1" required>Most<input type="radio" name="answer[group10][least]" value="cgroup10least1" required>Least</div><div class="dlabel"><label>Menjadi frustasi</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group10][most]" value="sgroup10most2">Most<input type="radio" name="answer[group10][least]" value="sgroup10least2">Least</div><div class="dlabel"><label>Memendam perasaan dalam hati</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group10][most]" value="bgroup10most3">Most<input type="radio" name="answer[group10][least]" value="igroup10least3">Least</div><div class="dlabel"><label>Menceritakan sisi kehidupan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group10][most]" value="dgroup10most4">Most<input type="radio" name="answer[group10][least]" value="dgroup10least4">Least</div><div class="dlabel"><label>Berpihak pada oposisi</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group11][most]" value="bgroup11most1" required>Most<input type="radio" name="answer[group11][least]" value="sgroup11least1" required>Least</div><div class="dlabel"><label>Non konfrontasi, Mengalah</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group11][most]" value="cgroup11most2">Most<input type="radio" name="answer[group11][least]" value="bgroup11least2">Least</div><div class="dlabel"><label>Penuh dengan rincian</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group11][most]" value="igroup11most3">Most<input type="radio" name="answer[group11][least]" value="igroup11least3">Least</div><div class="dlabel"><label>Perubahan pada menit terakhir</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group11][most]" value="dgroup11most4">Most<input type="radio" name="answer[group11][least]" value="dgroup11least4">Least</div><div class="dlabel"><label>Penuntut, Perusak</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group12][most]" value="dgroup12most1" required>Most<input type="radio" name="answer[group12][least]" value="bgroup12least1" required>Least</div><div class="dlabel"><label>Saya akan pimpin mereka</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group12][most]" value="sgroup12most2">Most<input type="radio" name="answer[group12][least]" value="sgroup12least2">Least</div><div class="dlabel"><label>Saya akan mengikuti</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group12][most]" value="igroup12most3">Most<input type="radio" name="answer[group12][least]" value="igroup12least3">Least</div><div class="dlabel"><label>Saya akan bujuk mereka</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group12][most]" value="cgroup12most4">Most<input type="radio" name="answer[group12][least]" value="bgroup12least4">Least</div><div class="dlabel"><label>Saya akan mendapatkan faktanya</label></div></div></td>
+                                      </tr>
+                                      <tr><td><div class="gr"><div class="dradio"><input type="radio" name="answer[group13][most]" value="igroup13most1" required>Most<input type="radio" name="answer[group13][least]" value="bgroup13least1" required>Least</div><div class="dlabel"><label>Hidup, banyak bicara</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group13][most]" value="dgroup13most2">Most<input type="radio" name="answer[group13][least]" value="dgroup13least2">Least</div><div class="dlabel"><label>Bekerja dengan cepat, Tekun</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group13][most]" value="sgroup13most3">Most<input type="radio" name="answer[group13][least]" value="sgroup13least3">Least</div><div class="dlabel"><label>Mencoba mempertahankan keseimbangan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group13][most]" value="bgroup13most4">Most<input type="radio" name="answer[group13][least]" value="cgroup13least4">Least</div><div class="dlabel"><label>Mencoba mengikuti aturan</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group14][most]" value="dgroup14most1" required>Most<input type="radio" name="answer[group14][least]" value="dgroup14least1" required>Least</div><div class="dlabel"><label>Menginginkan kemajuan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group14][most]" value="sgroup14most2">Most<input type="radio" name="answer[group14][least]" value="bgroup14least2">Least</div><div class="dlabel"><label>Puas dengan beberapa hal, Mudah puas</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group14][most]" value="igroup14most3">Most<input type="radio" name="answer[group14][least]" value="bgroup14least3">Least</div><div class="dlabel"><label>Menggambarkan perasaan secara terbuka</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group14][most]" value="bgroup14most4">Most<input type="radio" name="answer[group14][least]" value="cgroup14least4">Least</div><div class="dlabel"><label>Rendah hati, sederhana</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group15][most]" value="sgroup15most1" required>Most<input type="radio" name="answer[group15][least]" value="sgroup15least1" required>Least</div><div class="dlabel"><label>Memikirkan orang lain dahulu</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group15][most]" value="dgroup15most2">Most<input type="radio" name="answer[group15][least]" value="dgroup15least2">Least</div><div class="dlabel"><label>Kompetitif, Menyukai tantangan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group15][most]" value="igroup15most3">Most<input type="radio" name="answer[group15][least]" value="igroup15least3">Least</div><div class="dlabel"><label>Optimis, Positif</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group15][most]" value="bgroup15most4">Most<input type="radio" name="answer[group15][least]" value="cgroup15least4">Least</div><div class="dlabel"><label>Berpikir logis, Sistematis</label></div></div></td>
+                                      </tr>
+                                      <tr><td><div class="gr"><div class="dradio"><input type="radio" name="answer[group16][most]" value="cgroup16most1" required>Most<input type="radio" name="answer[group16][least]" value="bgroup16least1" required>Least</div><div class="dlabel"><label>Mengatur waktu secara efisien</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group16][most]" value="dgroup16most2">Most<input type="radio" name="answer[group16][least]" value="dgroup16least2">Least</div><div class="dlabel"><label>Sering terburu-buru, merasa tertekan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group16][most]" value="igroup16most3">Most<input type="radio" name="answer[group16][least]" value="igroup16least3">Least</div><div class="dlabel"><label>Hal-hal sosial merupakan hal yang penting</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group16][most]" value="sgroup16most4">Most<input type="radio" name="answer[group16][least]" value="sgroup16least4">Least</div><div class="dlabel"><label>Menyelesaikan apa yang telah dimulai</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group17][most]" value="cgroup17most1" required>Most<input type="radio" name="answer[group17][least]" value="cgroup17least1" required>Least</div><div class="dlabel"><label>Tenang, Pendiam</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group17][most]" value="igroup17most2">Most<input type="radio" name="answer[group17][least]" value="igroup17least2">Least</div><div class="dlabel"><label>Bahagia, Riang</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group17][most]" value="sgroup17most3">Most<input type="radio" name="answer[group17][least]" value="bgroup17least3">Least</div><div class="dlabel"><label>Menyenangkan, Baik</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group17][most]" value="dgroup17most4">Most<input type="radio" name="answer[group17][least]" value="dgroup17least4">Least</div><div class="dlabel"><label>Tegas, Berani</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group18][most]" value="sgroup18most1" required>Most<input type="radio" name="answer[group18][least]" value="sgroup18least1" required>Least</div><div class="dlabel"><label>Menyenangkan orang, Ramah</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group18][most]" value="bgroup18most2">Most<input type="radio" name="answer[group18][least]" value="igroup18least2">Least</div><div class="dlabel"><label>Tertawa keras, hidup</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group18][most]" value="dgroup18most3">Most<input type="radio" name="answer[group18][least]" value="dgroup18least3">Least</div><div class="dlabel"><label>Berani, tegas</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group18][most]" value="cgroup18most4">Most<input type="radio" name="answer[group18][least]" value="cgroup18least4">Least</div><div class="dlabel"><label>Tenang, Pendiam</label></div></div></td>
+                                      </tr>
+                                      <tr><td><div class="gr"><div class="dradio"><input type="radio" name="answer[group19][most]" value="sgroup19most1" required>Most<input type="radio" name="answer[group19][least]" value="bgroup19least1" required>Least</div><div class="dlabel"><label>Menolak perubahan mendadak</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group19][most]" value="igroup19most2">Most<input type="radio" name="answer[group19][least]" value="igroup19least2">Least</div><div class="dlabel"><label>Cenderung sering berjanji</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group19][most]" value="bgroup19most3">Most<input type="radio" name="answer[group19][least]" value="cgroup19least3">Least</div><div class="dlabel"><label>Menyendiri jika di bawah tekanan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group19][most]" value="bgroup19most4">Most<input type="radio" name="answer[group19][least]" value="dgroup19least4">Least</div><div class="dlabel"><label>Tidak takut berkelahi</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group20][most]" value="sgroup20most1" required>Most<input type="radio" name="answer[group20][least]" value="sgroup20least1" required>Least</div><div class="dlabel"><label>Menghabiskan waktu berharga dengan orang lain</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group20][most]" value="cgroup20most2">Most<input type="radio" name="answer[group20][least]" value="bgroup20least2">Least</div><div class="dlabel"><label>Merencanakan masa depan, Menyiapkan diri</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group20][most]" value="igroup20most3">Most<input type="radio" name="answer[group20][least]" value="igroup20least3">Least</div><div class="dlabel"><label>Perjalanan menuju petualangan baru</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group20][most]" value="dgroup20most4">Most<input type="radio" name="answer[group20][least]" value="dgroup20least4">Least</div><div class="dlabel"><label>Mendapat penghargaan jika mencapai tujuan</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group21][most]" value="bgroup21most1" required>Most<input type="radio" name="answer[group21][least]" value="dgroup21least1" required>Least</div><div class="dlabel"><label>Menginginkan kekuasaan lebih</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group21][most]" value="igroup21most2">Most<input type="radio" name="answer[group21][least]" value="bgroup21least2">Least</div><div class="dlabel"><label>Menginginkan kesempatan baru</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group21][most]" value="sgroup21most3">Most<input type="radio" name="answer[group21][least]" value="sgroup21least3">Least</div><div class="dlabel"><label>Menghindari konflik apapun</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group21][most]" value="bgroup21most4">Most<input type="radio" name="answer[group21][least]" value="cgroup21least4">Least</div><div class="dlabel"><label>Menginginkan arah yang jelas</label></div></div></td>
+                                      </tr>
+                                      <tr><td><div class="gr"><div class="dradio"><input type="radio" name="answer[group22][most]" value="igroup22most1" required>Most<input type="radio" name="answer[group22][least]" value="igroup22least1" required>Least</div><div class="dlabel"><label>Pendukung yang baik</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group22][most]" value="sgroup22most2">Most<input type="radio" name="answer[group22][least]" value="sgroup22least2">Least</div><div class="dlabel"><label>Pendengar yang baik</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group22][most]" value="cgroup22most3">Most<input type="radio" name="answer[group22][least]" value="cgroup22least3">Least</div><div class="dlabel"><label>Penganalisa yang baik</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group22][most]" value="dgroup22most4">Most<input type="radio" name="answer[group22][least]" value="dgroup22least4">Least</div><div class="dlabel"><label>Delegator yang baik</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group23][most]" value="bgroup23most1" required>Most<input type="radio" name="answer[group23][least]" value="dgroup23least1" required>Least</div><div class="dlabel"><label>Peraturan perlu ditolak</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group23][most]" value="cgroup23most2">Most<input type="radio" name="answer[group23][least]" value="bgroup23least2">Least</div><div class="dlabel"><label>Peraturan membuat adil</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group23][most]" value="igroup23most3">Most<input type="radio" name="answer[group23][least]" value="igroup23least3">Least</div><div class="dlabel"><label>Peraturan membuat bosan</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group23][most]" value="sgroup23most4">Most<input type="radio" name="answer[group23][least]" value="sgroup23least4">Least</div><div class="dlabel"><label>Peraturan membuat aman</label></div></div></td>
+                                      
+                                      <td><div class="gr"><div class="dradio"><input type="radio" name="answer[group24][most]" value="bgroup24most1" required>Most<input type="radio" name="answer[group24][least]" value="sgroup24least1" required>Least</div><div class="dlabel"><label>Bisa diandalkan, Bisa dipercaya</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group24][most]" value="igroup24most2">Most<input type="radio" name="answer[group24][least]" value="igroup24least2">Least</div><div class="dlabel"><label>Kreatif, Unik</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group24][most]" value="dgroup24most3">Most<input type="radio" name="answer[group24][least]" value="bgroup24least3">Least</div><div class="dlabel"><label>Berorientasi pada hasil, Inti</label></div>
+                                      <br><br><div class="dradio"><input type="radio" name="answer[group24][most]" value="cgroup24most4">Most<input type="radio" name="answer[group24][least]" value="bgroup24least4">Least</div><div class="dlabel"><label>Memegang teguh standart tinggi, Akurat</label></div></div></td>
+                                      <tr>
+                                      
+                                        
+
+                                  </tbody>
+                                </table>
+                                <div id="d1">
+
+                                </div>
+                                <br><br>
+                                <button class="btn btn--radius-2 btn--blue" onclick="myFunction()">Get Result</button>
+                                <br><br>
+                                <div id="resulttoggle" style="display:none">       
+                                  Result                          
+                                  <table>
+                                    <thead class="table100-head">
+                                      <tr>
+                                        <th></th>
+                                        <th>D</th>
+                                        <th>I</th>
+                                        <th>S</th>
+                                        <th>C</th>
+                                        <th>*</th>
+                                        <th>Total</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody class="table100-head">
+                                      <tr>
+                                        <td>Most</td>
+                                        <td id="Dmost"></td>
+                                        <td id="Imost"></td>
+                                        <td id="Smost"></td>
+                                        <td id="Cmost"></td>
+                                        <td id="Bmost"></td>
+                                        <td id="Tmost"></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Least</td>
+                                        <td id="Dleast"></td>
+                                        <td id="Ileast"></td>
+                                        <td id="Sleast"></td>
+                                        <td id="Cleast"></td>
+                                        <td id="Bleast"></td>
+                                        <td id="Tleast"></td>
+                                      </tr>    
+                                      <tr>
+                                        <td>Change</td>
+                                        <td id="Dchange"></td>
+                                        <td id="Ichange"></td>
+                                        <td id="Schange"></td>
+                                        <td id="Cchange"></td>
+                                        <td id="Bchange"></td>
+                                        <td id="Tchange"></td>
+                                      </tr>                                                                        
+                                    </tbody>  
+                                  </table>
+                                  <br><br>
+                                  <h3 id="r1" name="result[r1]"></h3><input type='hidden' name='result[r][r1]' id="result[r][r1]" value='' required/>
+                                  <h3 id="r2" name="result[r2]"></h3><input type='hidden' name='result[r][r2]' id="result[r][r2]" value='' required/>
+                                  <h3 id="r3" name="result[r3]"></h3><input type='hidden' name='result[r][r3]' id="result[r][r3]"  value='' required/>
+                                  <br><br>
+                                  Upload Your Graph ( .jpeg only | max 1MB)
+                                  <input type="file" name="file" id="file" accept="image/jpeg" required>
+                                  
+                                  <div class="p-t-15">
+                                    <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                                </div>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+
+
+
+                          <input type='hidden' name='answer[group1][most1]' value='sgroup1most1 'required/><input type='hidden' name='answer[group1][least1]' value='sgroup1least1' required /><input type='hidden' name='answer[group1][question1]' value='Mudah bergaul, ramah'  required/>
+<input type='hidden' name='answer[group1][most2]' value='igroup1most2 'required/><input type='hidden' name='answer[group1][least2]' value='igroup1least2' required /><input type='hidden' name='answer[group1][question2]' value='Penuh kepercayaan, Percaya kepada orang lain'  required/>
+<input type='hidden' name='answer[group1][most3]' value='bgroup1most3 'required/><input type='hidden' name='answer[group1][least3]' value='dgroup1least3' required /><input type='hidden' name='answer[group1][question3]' value='Petualang, Mengambil risiko'  required/>
+<input type='hidden' name='answer[group1][most4]' value='cgroup1most4 'required/><input type='hidden' name='answer[group1][least4]' value='cgroup1least4' required /><input type='hidden' name='answer[group1][question4]' value='Toleran, Penuh Hormat'  required/>
+<input type='hidden' name='answer[group2][most1]' value='dgroup2most1 'required/><input type='hidden' name='answer[group2][least1]' value='dgroup2least1' required /><input type='hidden' name='answer[group2][question1]' value='Yang penting adalah hasil'  required/>
+<input type='hidden' name='answer[group2][most2]' value='cgroup2most2 'required/><input type='hidden' name='answer[group2][least2]' value='cgroup2least2' required /><input type='hidden' name='answer[group2][question2]' value='Melakukan dengan benar, Ketepatan dihitung'  required/>
+<input type='hidden' name='answer[group2][most3]' value='bgroup2most3 'required/><input type='hidden' name='answer[group2][least3]' value='igroup2least3' required /><input type='hidden' name='answer[group2][question3]' value='Buat menjadi menyenangkan'  required/>
+<input type='hidden' name='answer[group2][most4]' value='bgroup2most4 'required/><input type='hidden' name='answer[group2][least4]' value='sgroup2least4' required /><input type='hidden' name='answer[group2][question4]' value='Mari melakukan bersama'  required/>
+<input type='hidden' name='answer[group3][most1]' value='bgroup3most1 'required/><input type='hidden' name='answer[group3][least1]' value='cgroup3least1' required /><input type='hidden' name='answer[group3][question1]' value='Pendidikan, Kebudayaan'  required/>
+<input type='hidden' name='answer[group3][most2]' value='dgroup3most2 'required/><input type='hidden' name='answer[group3][least2]' value='dgroup3least2' required /><input type='hidden' name='answer[group3][question2]' value='Pencapaian, Penghargaan'  required/>
+<input type='hidden' name='answer[group3][most3]' value='sgroup3most3 'required/><input type='hidden' name='answer[group3][least3]' value='sgroup3least3' required /><input type='hidden' name='answer[group3][question3]' value='Keselamatan, Keamanan'  required/>
+<input type='hidden' name='answer[group3][most4]' value='igroup3most4 'required/><input type='hidden' name='answer[group3][least4]' value='bgroup3least4' required /><input type='hidden' name='answer[group3][question4]' value='Sosial, Pertemuan kelompok'  required/>
+<input type='hidden' name='answer[group4][most1]' value='cgroup4most1 'required/><input type='hidden' name='answer[group4][least1]' value='bgroup4least1' required /><input type='hidden' name='answer[group4][question1]' value='Lembut, Pendiam'  required/>
+<input type='hidden' name='answer[group4][most2]' value='dgroup4most2 'required/><input type='hidden' name='answer[group4][least2]' value='dgroup4least2' required /><input type='hidden' name='answer[group4][question2]' value='Optimis, Pengkhayal'  required/>
+<input type='hidden' name='answer[group4][most3]' value='bgroup4most3 'required/><input type='hidden' name='answer[group4][least3]' value='igroup4least3' required /><input type='hidden' name='answer[group4][question3]' value='Pusat perhatian, Mudah bersosialisasi'  required/>
+<input type='hidden' name='answer[group4][most4]' value='sgroup4most4 'required/><input type='hidden' name='answer[group4][least4]' value='sgroup4least4' required /><input type='hidden' name='answer[group4][question4]' value='Pembuat Perdamaian, Membawa ketenangan'  required/>
+<input type='hidden' name='answer[group5][most1]' value='bgroup5most1 'required/><input type='hidden' name='answer[group5][least1]' value='cgroup5least1' required /><input type='hidden' name='answer[group5][question1]' value='Akan melakukan tanpa, Kontrol diri'  required/>
+<input type='hidden' name='answer[group5][most2]' value='dgroup5most2 'required/><input type='hidden' name='answer[group5][least2]' value='dgroup5least2' required /><input type='hidden' name='answer[group5][question2]' value='Akan membeli berdasarkan hasrat'  required/>
+<input type='hidden' name='answer[group5][most3]' value='sgroup5most3 'required/><input type='hidden' name='answer[group5][least3]' value='sgroup5least3' required /><input type='hidden' name='answer[group5][question3]' value='Akan menunggu. Tidak ada tekanan'  required/>
+<input type='hidden' name='answer[group5][most4]' value='igroup5most4 'required/><input type='hidden' name='answer[group5][least4]' value='bgroup5least4' required /><input type='hidden' name='answer[group5][question4]' value='Akan membelanjakan apa yang saya inginkan'  required/>
+<input type='hidden' name='answer[group6][most1]' value='dgroup6most1 'required/><input type='hidden' name='answer[group6][least1]' value='dgroup6least1' required /><input type='hidden' name='answer[group6][question1]' value='Bertanggung jawab, Pendekatan langsung'  required/>
+<input type='hidden' name='answer[group6][most2]' value='bgroup6most2 'required/><input type='hidden' name='answer[group6][least2]' value='igroup6least2' required /><input type='hidden' name='answer[group6][question2]' value='Mudah bergaul, Antusias'  required/>
+<input type='hidden' name='answer[group6][most3]' value='bgroup6most3 'required/><input type='hidden' name='answer[group6][least3]' value='sgroup6least3' required /><input type='hidden' name='answer[group6][question3]' value='Mudah ditebak, Konsisten'  required/>
+<input type='hidden' name='answer[group6][most4]' value='cgroup6most4 'required/><input type='hidden' name='answer[group6][least4]' value='bgroup6least4' required /><input type='hidden' name='answer[group6][question4]' value='Waspada, Berhati-hati'  required/>
+<input type='hidden' name='answer[group7][most1]' value='igroup7most1 'required/><input type='hidden' name='answer[group7][least1]' value='cgroup7least1' required /><input type='hidden' name='answer[group7][question1]' value='Mendorong orang lain'  required/>
+<input type='hidden' name='answer[group7][most2]' value='bgroup7most2 'required/><input type='hidden' name='answer[group7][least2]' value='sgroup7least2' required /><input type='hidden' name='answer[group7][question2]' value='Berjuang demi kesempurnaan'  required/>
+<input type='hidden' name='answer[group7][most3]' value='bgroup7most3 'required/><input type='hidden' name='answer[group7][least3]' value='bgroup7least3' required /><input type='hidden' name='answer[group7][question3]' value='Menjadi bagian tim'  required/>
+<input type='hidden' name='answer[group7][most4]' value='dgroup7most4 'required/><input type='hidden' name='answer[group7][least4]' value='dgroup7least4' required /><input type='hidden' name='answer[group7][question4]' value='Ingin mencapai tujuan'  required/>
+<input type='hidden' name='answer[group8][most1]' value='sgroup8most1 'required/><input type='hidden' name='answer[group8][least1]' value='bgroup8least1' required /><input type='hidden' name='answer[group8][question1]' value='Ramah, Mudah berteman'  required/>
+<input type='hidden' name='answer[group8][most2]' value='bgroup8most2 'required/><input type='hidden' name='answer[group8][least2]' value='igroup8least2' required /><input type='hidden' name='answer[group8][question2]' value='Unik, Bosan dengan rutinitas'  required/>
+<input type='hidden' name='answer[group8][most3]' value='dgroup8most3 'required/><input type='hidden' name='answer[group8][least3]' value='dgroup8least3' required /><input type='hidden' name='answer[group8][question3]' value='Aktif merubah hal-hal'  required/>
+<input type='hidden' name='answer[group8][most4]' value='cgroup8most4 'required/><input type='hidden' name='answer[group8][least4]' value='cgroup8least4' required /><input type='hidden' name='answer[group8][question4]' value='Menginginkan sesuatu yang pasti'  required/>
+<input type='hidden' name='answer[group9][most1]' value='dgroup9most1 'required/><input type='hidden' name='answer[group9][least1]' value='dgroup9least1' required /><input type='hidden' name='answer[group9][question1]' value='Tidak mudah dikalahkan'  required/>
+<input type='hidden' name='answer[group9][most2]' value='sgroup9most2 'required/><input type='hidden' name='answer[group9][least2]' value='bgroup9least2' required /><input type='hidden' name='answer[group9][question2]' value='Akan melakukan sesuai perintah, Mengikuti pimpinan'  required/>
+<input type='hidden' name='answer[group9][most3]' value='igroup9most3 'required/><input type='hidden' name='answer[group9][least3]' value='igroup9least3' required /><input type='hidden' name='answer[group9][question3]' value='Riang, Ceria'  required/>
+<input type='hidden' name='answer[group9][most4]' value='bgroup9most4 'required/><input type='hidden' name='answer[group9][least4]' value='cgroup9least4' required /><input type='hidden' name='answer[group9][question4]' value='Ingin segalanya teratur, Rapi'  required/>
+<input type='hidden' name='answer[group10][most1]' value='cgroup10most1 'required/><input type='hidden' name='answer[group10][least1]' value='cgroup10least1' required /><input type='hidden' name='answer[group10][question1]' value='Menjadi frustasi'  required/>
+<input type='hidden' name='answer[group10][most2]' value='sgroup10most2 'required/><input type='hidden' name='answer[group10][least2]' value='sgroup10least2' required /><input type='hidden' name='answer[group10][question2]' value='Memendam perasaan dalam hati'  required/>
+<input type='hidden' name='answer[group10][most3]' value='bgroup10most3 'required/><input type='hidden' name='answer[group10][least3]' value='igroup10least3' required /><input type='hidden' name='answer[group10][question3]' value='Menceritakan sisi kehidupan'  required/>
+<input type='hidden' name='answer[group10][most4]' value='dgroup10most4 'required/><input type='hidden' name='answer[group10][least4]' value='dgroup10least4' required /><input type='hidden' name='answer[group10][question4]' value='Berpihak pada oposisi'  required/>
+<input type='hidden' name='answer[group11][most1]' value='bgroup11most1 'required/><input type='hidden' name='answer[group11][least1]' value='sgroup11least1' required /><input type='hidden' name='answer[group11][question1]' value='Non konfrontasi, Mengalah'  required/>
+<input type='hidden' name='answer[group11][most2]' value='cgroup11most2 'required/><input type='hidden' name='answer[group11][least2]' value='bgroup11least2' required /><input type='hidden' name='answer[group11][question2]' value='Penuh dengan rincian'  required/>
+<input type='hidden' name='answer[group11][most3]' value='igroup11most3 'required/><input type='hidden' name='answer[group11][least3]' value='igroup11least3' required /><input type='hidden' name='answer[group11][question3]' value='Perubahan pada menit terakhir'  required/>
+<input type='hidden' name='answer[group11][most4]' value='dgroup11most4 'required/><input type='hidden' name='answer[group11][least4]' value='dgroup11least4' required /><input type='hidden' name='answer[group11][question4]' value='Penuntut, Perusak'  required/>
+<input type='hidden' name='answer[group12][most1]' value='dgroup12most1 'required/><input type='hidden' name='answer[group12][least1]' value='bgroup12least1' required /><input type='hidden' name='answer[group12][question1]' value='Saya akan pimpin mereka'  required/>
+<input type='hidden' name='answer[group12][most2]' value='sgroup12most2 'required/><input type='hidden' name='answer[group12][least2]' value='sgroup12least2' required /><input type='hidden' name='answer[group12][question2]' value='Saya akan mengikuti'  required/>
+<input type='hidden' name='answer[group12][most3]' value='igroup12most3 'required/><input type='hidden' name='answer[group12][least3]' value='igroup12least3' required /><input type='hidden' name='answer[group12][question3]' value='Saya akan bujuk mereka'  required/>
+<input type='hidden' name='answer[group12][most4]' value='cgroup12most4 'required/><input type='hidden' name='answer[group12][least4]' value='bgroup12least4' required /><input type='hidden' name='answer[group12][question4]' value='Saya akan mendapatkan faktanya'  required/>
+<input type='hidden' name='answer[group13][most1]' value='igroup13most1 'required/><input type='hidden' name='answer[group13][least1]' value='bgroup13least1' required /><input type='hidden' name='answer[group13][question1]' value='Hidup, banyak bicara'  required/>
+<input type='hidden' name='answer[group13][most2]' value='dgroup13most2 'required/><input type='hidden' name='answer[group13][least2]' value='dgroup13least2' required /><input type='hidden' name='answer[group13][question2]' value='Bekerja dengan cepat, Tekun'  required/>
+<input type='hidden' name='answer[group13][most3]' value='sgroup13most3 'required/><input type='hidden' name='answer[group13][least3]' value='sgroup13least3' required /><input type='hidden' name='answer[group13][question3]' value='Mencoba mempertahankan keseimbangan'  required/>
+<input type='hidden' name='answer[group13][most4]' value='bgroup13most4 'required/><input type='hidden' name='answer[group13][least4]' value='cgroup13least4' required /><input type='hidden' name='answer[group13][question4]' value='Mencoba mengikuti aturan'  required/>
+<input type='hidden' name='answer[group14][most1]' value='dgroup14most1 'required/><input type='hidden' name='answer[group14][least1]' value='dgroup14least1' required /><input type='hidden' name='answer[group14][question1]' value='Menginginkan kemajuan'  required/>
+<input type='hidden' name='answer[group14][most2]' value='sgroup14most2 'required/><input type='hidden' name='answer[group14][least2]' value='bgroup14least2' required /><input type='hidden' name='answer[group14][question2]' value='Puas dengan beberapa hal, Mudah puas'  required/>
+<input type='hidden' name='answer[group14][most3]' value='igroup14most3 'required/><input type='hidden' name='answer[group14][least3]' value='bgroup14least3' required /><input type='hidden' name='answer[group14][question3]' value='Menggambarkan perasaan secara terbuka'  required/>
+<input type='hidden' name='answer[group14][most4]' value='bgroup14most4 'required/><input type='hidden' name='answer[group14][least4]' value='cgroup14least4' required /><input type='hidden' name='answer[group14][question4]' value='Rendah hati, sederhana'  required/>
+<input type='hidden' name='answer[group15][most1]' value='sgroup15most1 'required/><input type='hidden' name='answer[group15][least1]' value='sgroup15least1' required /><input type='hidden' name='answer[group15][question1]' value='Memikirkan orang lain dahulu'  required/>
+<input type='hidden' name='answer[group15][most2]' value='dgroup15most2 'required/><input type='hidden' name='answer[group15][least2]' value='dgroup15least2' required /><input type='hidden' name='answer[group15][question2]' value='Kompetitif, Menyukai tantangan'  required/>
+<input type='hidden' name='answer[group15][most3]' value='igroup15most3 'required/><input type='hidden' name='answer[group15][least3]' value='igroup15least3' required /><input type='hidden' name='answer[group15][question3]' value='Optimis, Positif'  required/>
+<input type='hidden' name='answer[group15][most4]' value='bgroup15most4 'required/><input type='hidden' name='answer[group15][least4]' value='cgroup15least4' required /><input type='hidden' name='answer[group15][question4]' value='Berpikir logis, Sistematis'  required/>
+<input type='hidden' name='answer[group16][most1]' value='cgroup16most1 'required/><input type='hidden' name='answer[group16][least1]' value='bgroup16least1' required /><input type='hidden' name='answer[group16][question1]' value='Mengatur waktu secara efisien'  required/>
+<input type='hidden' name='answer[group16][most2]' value='dgroup16most2 'required/><input type='hidden' name='answer[group16][least2]' value='dgroup16least2' required /><input type='hidden' name='answer[group16][question2]' value='Sering terburu-buru, merasa tertekan'  required/>
+<input type='hidden' name='answer[group16][most3]' value='igroup16most3 'required/><input type='hidden' name='answer[group16][least3]' value='igroup16least3' required /><input type='hidden' name='answer[group16][question3]' value='Hal-hal sosial merupakan hal yang penting'  required/>
+<input type='hidden' name='answer[group16][most4]' value='sgroup16most4 'required/><input type='hidden' name='answer[group16][least4]' value='sgroup16least4' required /><input type='hidden' name='answer[group16][question4]' value='Menyelesaikan apa yang telah dimulai'  required/>
+<input type='hidden' name='answer[group17][most1]' value='cgroup17most1 'required/><input type='hidden' name='answer[group17][least1]' value='cgroup17least1' required /><input type='hidden' name='answer[group17][question1]' value='Tenang, Pendiam'  required/>
+<input type='hidden' name='answer[group17][most2]' value='igroup17most2 'required/><input type='hidden' name='answer[group17][least2]' value='igroup17least2' required /><input type='hidden' name='answer[group17][question2]' value='Bahagia, Riang'  required/>
+<input type='hidden' name='answer[group17][most3]' value='sgroup17most3 'required/><input type='hidden' name='answer[group17][least3]' value='bgroup17least3' required /><input type='hidden' name='answer[group17][question3]' value='Menyenangkan, Baik'  required/>
+<input type='hidden' name='answer[group17][most4]' value='dgroup17most4 'required/><input type='hidden' name='answer[group17][least4]' value='dgroup17least4' required /><input type='hidden' name='answer[group17][question4]' value='Tegas, Berani'  required/>
+<input type='hidden' name='answer[group18][most1]' value='sgroup18most1 'required/><input type='hidden' name='answer[group18][least1]' value='sgroup18least1' required /><input type='hidden' name='answer[group18][question1]' value='Menyenangkan orang, Ramah'  required/>
+<input type='hidden' name='answer[group18][most2]' value='bgroup18most2 'required/><input type='hidden' name='answer[group18][least2]' value='igroup18least2' required /><input type='hidden' name='answer[group18][question2]' value='Tertawa keras, hidup'  required/>
+<input type='hidden' name='answer[group18][most3]' value='dgroup18most3 'required/><input type='hidden' name='answer[group18][least3]' value='dgroup18least3' required /><input type='hidden' name='answer[group18][question3]' value='Berani, tegas'  required/>
+<input type='hidden' name='answer[group18][most4]' value='cgroup18most4 'required/><input type='hidden' name='answer[group18][least4]' value='cgroup18least4' required /><input type='hidden' name='answer[group18][question4]' value='Tenang, Pendiam'  required/>
+<input type='hidden' name='answer[group19][most1]' value='sgroup19most1 'required/><input type='hidden' name='answer[group19][least1]' value='bgroup19least1' required /><input type='hidden' name='answer[group19][question1]' value='Menolak perubahan mendadak'  required/>
+<input type='hidden' name='answer[group19][most2]' value='igroup19most2 'required/><input type='hidden' name='answer[group19][least2]' value='igroup19least2' required /><input type='hidden' name='answer[group19][question2]' value='Cenderung sering berjanji'  required/>
+<input type='hidden' name='answer[group19][most3]' value='bgroup19most3 'required/><input type='hidden' name='answer[group19][least3]' value='cgroup19least3' required /><input type='hidden' name='answer[group19][question3]' value='Menyendiri jika di bawah tekanan'  required/>
+<input type='hidden' name='answer[group19][most4]' value='bgroup19most4 'required/><input type='hidden' name='answer[group19][least4]' value='dgroup19least4' required /><input type='hidden' name='answer[group19][question4]' value='Tidak takut berkelahi'  required/>
+<input type='hidden' name='answer[group20][most1]' value='sgroup20most1 'required/><input type='hidden' name='answer[group20][least1]' value='sgroup20least1' required /><input type='hidden' name='answer[group20][question1]' value='Menghabiskan waktu berharga dengan orang lain'  required/>
+<input type='hidden' name='answer[group20][most2]' value='cgroup20most2 'required/><input type='hidden' name='answer[group20][least2]' value='bgroup20least2' required /><input type='hidden' name='answer[group20][question2]' value='Merencanakan masa depan, Menyiapkan diri'  required/>
+<input type='hidden' name='answer[group20][most3]' value='igroup20most3 'required/><input type='hidden' name='answer[group20][least3]' value='igroup20least3' required /><input type='hidden' name='answer[group20][question3]' value='Perjalanan menuju petualangan baru'  required/>
+<input type='hidden' name='answer[group20][most4]' value='dgroup20most4 'required/><input type='hidden' name='answer[group20][least4]' value='dgroup20least4' required /><input type='hidden' name='answer[group20][question4]' value='Mendapat penghargaan jika mencapai tujuan'  required/>
+<input type='hidden' name='answer[group21][most1]' value='bgroup21most1 'required/><input type='hidden' name='answer[group21][least1]' value='dgroup21least1' required /><input type='hidden' name='answer[group21][question1]' value='Menginginkan kekuasaan lebih'  required/>
+<input type='hidden' name='answer[group21][most2]' value='igroup21most2 'required/><input type='hidden' name='answer[group21][least2]' value='bgroup21least2' required /><input type='hidden' name='answer[group21][question2]' value='Menginginkan kesempatan baru'  required/>
+<input type='hidden' name='answer[group21][most3]' value='sgroup21most3 'required/><input type='hidden' name='answer[group21][least3]' value='sgroup21least3' required /><input type='hidden' name='answer[group21][question3]' value='Menghindari konflik apapun'  required/>
+<input type='hidden' name='answer[group21][most4]' value='bgroup21most4 'required/><input type='hidden' name='answer[group21][least4]' value='cgroup21least4' required /><input type='hidden' name='answer[group21][question4]' value='Menginginkan arah yang jelas'  required/>
+<input type='hidden' name='answer[group22][most1]' value='igroup22most1 'required/><input type='hidden' name='answer[group22][least1]' value='igroup22least1' required /><input type='hidden' name='answer[group22][question1]' value='Pendukung yang baik'  required/>
+<input type='hidden' name='answer[group22][most2]' value='sgroup22most2 'required/><input type='hidden' name='answer[group22][least2]' value='sgroup22least2' required /><input type='hidden' name='answer[group22][question2]' value='Pendengar yang baik'  required/>
+<input type='hidden' name='answer[group22][most3]' value='cgroup22most3 'required/><input type='hidden' name='answer[group22][least3]' value='cgroup22least3' required /><input type='hidden' name='answer[group22][question3]' value='Penganalisa yang baik'  required/>
+<input type='hidden' name='answer[group22][most4]' value='dgroup22most4 'required/><input type='hidden' name='answer[group22][least4]' value='dgroup22least4' required /><input type='hidden' name='answer[group22][question4]' value='Delegator yang baik'  required/>
+<input type='hidden' name='answer[group23][most1]' value='bgroup23most1 'required/><input type='hidden' name='answer[group23][least1]' value='dgroup23least1' required /><input type='hidden' name='answer[group23][question1]' value='Peraturan perlu ditolak'  required/>
+<input type='hidden' name='answer[group23][most2]' value='cgroup23most2 'required/><input type='hidden' name='answer[group23][least2]' value='bgroup23least2' required /><input type='hidden' name='answer[group23][question2]' value='Peraturan membuat adil'  required/>
+<input type='hidden' name='answer[group23][most3]' value='igroup23most3 'required/><input type='hidden' name='answer[group23][least3]' value='igroup23least3' required /><input type='hidden' name='answer[group23][question3]' value='Peraturan membuat bosan'  required/>
+<input type='hidden' name='answer[group23][most4]' value='sgroup23most4 'required/><input type='hidden' name='answer[group23][least4]' value='sgroup23least4' required /><input type='hidden' name='answer[group23][question4]' value='Peraturan membuat aman'  required/>
+<input type='hidden' name='answer[group24][most1]' value='bgroup24most1 'required/><input type='hidden' name='answer[group24][least1]' value='sgroup24least1' required /><input type='hidden' name='answer[group24][question1]' value='Bisa diandalkan, Bisa dipercaya'  required/>
+<input type='hidden' name='answer[group24][most2]' value='igroup24most2 'required/><input type='hidden' name='answer[group24][least2]' value='igroup24least2' required /><input type='hidden' name='answer[group24][question2]' value='Kreatif, Unik'  required/>
+<input type='hidden' name='answer[group24][most3]' value='dgroup24most3 'required/><input type='hidden' name='answer[group24][least3]' value='bgroup24least3' required /><input type='hidden' name='answer[group24][question3]' value='Berorientasi pada hasil, Inti'  required/>
+<input type='hidden' name='answer[group24][most4]' value='cgroup24most4 'required/><input type='hidden' name='answer[group24][least4]' value='bgroup24least4' required /><input type='hidden' name='answer[group24][question4]' value='Memegang teguh standart tinggi, Akurat'  required/>
+
+
+
+
+
+
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+  <script src="table/js/main.js"></script>
+  <script src="js/hBarChart.js"></script>
+
+<script type="text/javascript">
+
+
+$("input[type=radio]").change(function(){
+   if ($(this).is(':checked')) {
+     var name = $(this).attr("name");
+     $(this).parent().children().each(function(i) { 
+       if(this.getAttribute("name") != name){
+       	 this.checked = false;
+       }
+     });
+   }
+});
+
+
+var uploadField = document.getElementById("file");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 1100000){
+       alert("File is too big!");
+       this.value = "";
+    };
+};
+
+
+var json = [   
+
+  ];
+var txt = '{"name":"John", "age":30, "city":"New York"}'
+
+$(document).ready(function () {
+  
+  var sdf = Math.random().toString(36).substr(2, 20);
+  document.getElementById("photo").value = sdf;
+
+        $.ajax({
+    url: urldata,
+                type: 'GET',
+                dataType: 'json',
+                crossDomain: true,
+                success: function(data) {
+
+                  for(var key in data.teacher) {
+                    var id = data.teacher[key].id;
+                    var idm = data.teacher[key].idMember;
+                    var value = data.teacher[key].firstname + " "+ data.teacher[key].lastname;
+                    $('#teacher').append(`
+                      <option value="${idm}">${value}</option>
+                    `)
+                  }  
+
+                },
+                error: function (e) {
+                  //alert("Something went wrong on LOAD");
+                  location.href = "500.html"
+                }
+            });
+
+});
+
+
+
+$('#myForm').submit(function() {
+  $('form button').attr("disabled","disabled");
+  
+var fileInput = document.getElementById('file');   
+var filename = fileInput.files[0].name;
+
+//alert(filename);
+var filename = document.getElementById('photo').value;  
+filename = filename + ".jpeg";
+
+var input = document.querySelector('input[type="file"]')
+
+var data = new FormData()
+data.append('file', input.files[0])
+data.append('filename', filename)
+
+fetch(urlimage, {
+method: 'POST',
+body: data
+})
+.then((response) => response.json())
+.then((result) => {
+console.log('Success:', result);
+alert("Image Upload Success");
+})
+.catch((error) => {
+console.error('Error:', error);
+alert("Image Upload Error");
+});
+ 
+
+            $.ajax({
+                type: 'POST',
+				        crossDomain: true,
+                url: urlsubmit,
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function(data) {
+                  //alert(JSON.stringify(data));
+                  alert("Submit Success");
+                },
+                error: function (data) {
+                  //alert(JSON.stringify(data));                 
+                  alert("Something went wrong");
+                  $('form button').attr("disabled",false);
+                }
+            })
+            return false;
+        });
+
+
+
+ function myFunction() {
+
+
+
+  var x = document.getElementById("resulttoggle");
+      x.style.display = "block";
+
+      var formData = JSON.stringify($("#myForm").serializeArray());
+      var obj = JSON.parse(formData);
+      var form = document.getElementById("myForm");
+
+      var Dmost = 0;
+      var Imost = 0;
+      var Smost = 0;
+      var Cmost = 0;
+      var Bmost = 0;
+      var Tmost = 0;
+
+      var Dleast = 0;
+      var Ileast = 0;
+      var Sleast = 0;
+      var Cleast = 0;
+      var Bleast = 0;
+      var Tleast = 0;
+
+      var Dchange = 0;
+      var Ichange = 0;
+      var Schange = 0;
+      var Cchange = 0;
+      var Bchange = 0;
+      var Tchange = 0;
+
+
+      for (var i = 1; i < 25; i++) {
+        var dtmost = form.elements["answer[group"+i+"][most]"].value;
+        var dtsub = dtmost.substr(0,1);
+        if (dtsub == 'd'){
+          Dmost+=1;
+        }else if(dtsub == 'i'){
+          Imost+=1;
+        }else if(dtsub == 's'){
+          Smost+=1;
+        }else if(dtsub == 'c'){
+          Cmost+=1;
+        }else if(dtsub == 'b'){
+          Bmost+=1;
+        }
+      }
+      Tmost = Dmost + Imost + Smost + Cmost + Bmost;
+      $('#Dmost').html(Dmost);
+      $('#Imost').html(Imost);
+      $('#Smost').html(Smost);
+      $('#Cmost').html(Cmost);
+      $('#Bmost').html(Bmost);
+      $('#Tmost').html(Tmost);
+
+
+      for (var i = 1; i < 25; i++) {
+        var dtleast = form.elements["answer[group"+i+"][least]"].value;
+        var dtsub = dtleast.substr(0,1);
+        if (dtsub == 'd'){
+          Dleast+=1;
+        }else if(dtsub == 'i'){
+          Ileast+=1;
+        }else if(dtsub == 's'){
+          Sleast+=1;
+        }else if(dtsub == 'c'){
+          Cleast+=1;
+        }else if(dtsub == 'b'){
+          Bleast+=1;
+        }
+      }
+      Tleast = Dleast + Ileast + Sleast + Cleast + Bleast;
+      $('#Dleast').html(Dleast);
+      $('#Ileast').html(Ileast);
+      $('#Sleast').html(Sleast);
+      $('#Cleast').html(Cleast);
+      $('#Bleast').html(Bleast);
+      $('#Tleast').html(Tleast);
+
+
+      Dchange = Dmost - Dleast;
+      Ichange = Imost - Ileast;
+      Schange = Smost - Sleast;
+      Cchange = Cmost - Cleast;
+      $('#Dchange').html(Dchange);
+      $('#Ichange').html(Ichange);
+      $('#Schange').html(Schange);
+      $('#Cchange').html(Cchange);
+
+
+
+      var tr1 = "";
+      if(Dmost > 6){
+        tr1 = tr1 + "D";
+      }
+      if (Imost > 3){
+        tr1 = tr1 + "I";  
+      }
+      if (Smost > 4){
+        tr1 = tr1 + "S";
+      }
+      if (Cmost > 3){
+        tr1 = tr1 + "C";
+      }
+      $('#r1').html("Most, public self : " + tr1);
+      document.getElementById("result[r][r1]").value = "Most, public self : " + tr1;
+
+
+      var tr2 = "";
+      if(Dleast < 6){
+        tr2 = tr2 + "D";
+      }
+      if (Ileast < 5){
+        tr2 = tr2 + "I";  
+      }
+      if (Sleast < 7){
+        tr2 = tr2 + "S";
+      }
+      if (Cleast < 7){
+        tr2 = tr2 + "C";
+      }
+      $('#r2').html("Least, private self : " + tr2);
+      document.getElementById("result[r][r2]").value = "Least, private self : " + tr2;
+
+
+
+      var tr3 = "";
+      if(Dchange > 0){
+        tr3 = tr3 + "D";
+      }
+      if (Ichange > -1){
+        tr3 = tr3 + "I";  
+      }
+      if (Schange > -1){
+        tr3 = tr3 + "S";
+      }
+      if (Cchange > -3){
+        tr3 = tr3 + "C";
+      }
+      $('#r3').html("Change, percieved self : " + tr3);
+      document.getElementById("result[r][r3]").value = "Change, percieved self : " + tr3;
+
+      var new_array = [];
+      for (var i = 0; i < json.length; i++) {
+      var a1 = form.elements["answer[group"+i+"][most]"].value;
+      var a2 = form.elements["answer[group"+i+"][least]"].value;
+      //var a2 = form.elements["answer[soal"+i+"][answer]"].value;
+      new_array.push([a1,a2]);
+      }
+
+
+
+      console.log(new_array);
+
+}
+
+
+</script>	
+	
+	
+	
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
